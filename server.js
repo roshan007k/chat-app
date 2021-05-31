@@ -47,5 +47,6 @@ io.on('connection',socket=>{
 
 })
 const PORT=process.env.PORT || 3000;
+const host='0.0.0.0'
 
-server.listen(process.env.PORT || 3000,()=>console.log(`Server running on port ${PORT}`))
+server.listen(PORT,host,()=>console.log(`Server running on port ${PORT}`))
