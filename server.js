@@ -6,7 +6,7 @@ const app=express();
 const server=http.createServer(app)
 const io=socketio(server);
 app.use(express.static(path.join(__dirname,'public')));
-
+const {roomcreated}=require('./utils/room')
 const formatMessage=require('./utils/messages');
 const {userJoin,getCurrentUser,getRoomUsers,userLeave} =require('./utils/users')
 const botName='UserBot'
@@ -25,7 +25,10 @@ io.on('connection',socket=>{
         })
     })
 
-
+    socket.on('createRoom',(msg)=>{
+        const room=roomcreated(msg) 
+        socket.emit('createdRoom',room)
+    })
 
 
     socket.on('chatMessage',(msg)=>{

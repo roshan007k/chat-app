@@ -16,7 +16,7 @@
 	<body>
 		<div class="join-container">
 			<header class="join-header">
-				<h1><i class="fas fa-smile"></i> ChatCord</h1>
+				<h1><i class="fas fa-smile"></i> ChatApp</h1>
 			</header>
 			<main class="join-main">
 				<form action="chat.html">
@@ -32,18 +32,42 @@
 					</div>
 					<div class="form-control">
 						<label for="room">Room</label>
-						<select name="room" id="room">
-							<option value="JavaScript">JavaScript</option>
-							<option value="Python">Python</option>
+						<select name="room" id="room2">
+							<option value="JavaScript">Default Room</option>
+							<!-- <option value="Python">Python</option>
 							<option value="PHP">PHP</option>
 							<option value="C#">C#</option>
 							<option value="Ruby">Ruby</option>
-							<option value="Java">Java</option>
+							<option value="Java">Java</option> -->
 						</select>
 					</div>
 					<button type="submit" class="btn">Join Chat</button>
 				</form>
 			</main>
 		</div>
+		<div class="create-room">
+			<header class="join-header">
+				<h1>Create Room</h1>
+			</header>
+			<main class="join-main">
+				<form id="create-room">
+					<div class="form-control">
+						<label for="username">Enter Room Name</label>
+						<input
+							type="text"
+							name="room"
+							id="room"
+							placeholder="Enter room name..."
+							required
+						/>
+					</div>
+					<button class="btn"><i class="fas fa-paper-plane"></i> Create</button>
+				</form>
+			</main>
+
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="js/createRoom.js"></script>
 	</body>
 </html>

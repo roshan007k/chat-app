@@ -1,5 +1,7 @@
 const chatForm=document.getElementById('chat-form');
 
+
+
 const socket=io();
 
 const chatMessages=document.querySelector('.chat-messages');
@@ -24,12 +26,13 @@ socket.on('message',message=>{
 chatForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     const msg=e.target.elements.msg.value;
+    console.log(msg)
     socket.emit('chatMessage',msg);
-
     e.target.elements.msg.value='';
     e.target.elements.msg.focus();
 
-})
+});
+
 
 
 

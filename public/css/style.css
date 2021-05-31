@@ -130,9 +130,23 @@ a {
 
 /* Join Page */
 .join-container {
-	max-width: 500px;
+	max-width: 800px;
+	width: 600px;
 	margin: 80px auto;
 	color: #fff;
+	float: left;
+	margin-left:50px;
+	display:flex;
+}
+.create-room{
+	max-width: 500px;
+	height:300px;
+	margin: 80px auto;
+	color: #fff;
+	display: flex;
+	float: right;
+	margin-right: 100px;
+
 }
 
 .join-header {
@@ -157,7 +171,7 @@ a {
 }
 
 .join-main label {
-	display: block;
+	display: flex;
 	margin-bottom: 5px;
 }
 
@@ -182,7 +196,7 @@ a {
 
 @media (max-width: 700px) {
 	.chat-main {
-		display: block;
+		display: flex;
 	}
 
 	.chat-sidebar {
